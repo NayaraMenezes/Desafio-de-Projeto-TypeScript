@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/typescript" src="desafio4.ts"></script>
-    <script type="text/typescript">
-      setTimeout(()=>console.log('hello'));
-    </script>
-
     <title>Document</title>
   </head>
 
@@ -49,7 +44,13 @@
           <input id="search" placeholder="Write..." />
           <button id="search-button">Pesquisar Filme</button>
         </div>
+        <div id="list-container" style="margin-left: 20px">
+          <input id="list-name" placeholder="Nome..." />
+          <textarea id="list-desc" placeholder="Descrição..."></textarea>
+          <button id="add-list-button">Incluir Lista</button>
+        </div>
       </div>
     </header>
   </body>
+  <script src="app.js"></script>
 </html>
