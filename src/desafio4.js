@@ -1,26 +1,22 @@
+"use strict";
 // let apikey: string;
 // let requestToken: string;
 // let username: string;
 // let password: string;
 // let sessionId: string;
 // let listId: string = "7101979";
-
 // let loginButton = document.getElementById("login-button");
 // let searchButton = document.getElementById("search-button");
 // let searchContainer = document.getElementById("search-container");
-
 // if (!loginButton) throw new Error("Botão login não encontrado");
 // console.log("entrei");
-
 // loginButton.addEventListener("click", async () => {
 //   console.log("entrei");
 //   await criarRequestToken();
 //   await logar();
 //   await criarSessao();
 // });
-
 // if (!searchButton) throw new Error("Botão de busca não encontrado");
-
 // searchButton.addEventListener("click", async () => {
 //   let lista = document.getElementById("lista");
 //   if (lista) {
@@ -38,28 +34,22 @@
 //     li.appendChild(document.createTextNode(item.original_title));
 //     ul.appendChild(li);
 //   }
-
 //   console.log(listaDeFilmes);
-
 //   if (!searchContainer) throw new Error("Caixa de busca não encontrado");
 //   searchContainer.appendChild(ul);
 // });
-
 // function preencherSenha() {
 //   password = document.getElementById("senha").value;
 //   validateLoginButton();
 // }
-
 // function preencherLogin() {
 //   username = document.getElementById("login").value;
 //   validateLoginButton();
 // }
-
 // function preencherApi() {
 //   apikey = document.getElementById("api-key").value;
 //   validateLoginButton();
 // }
-
 // function validateLoginButton() {
 //   if (password && username && apikey) {
 //     loginButton.disabled = false;
@@ -67,13 +57,11 @@
 //     loginButton.disabled = true;
 //   }
 // }
-
 // class HttpClient {
 //   static async get({ url, method, body = null }) {
 //     return new Promise((resolve, reject) => {
 //       let request = new XMLHttpRequest();
 //       request.open(method, url, true);
-
 //       request.onload = () => {
 //         if (request.status >= 200 && request.status < 300) {
 //           resolve(JSON.parse(request.responseText));
@@ -90,7 +78,6 @@
 //           statusText: request.statusText,
 //         });
 //       };
-
 //       if (body) {
 //         request.setRequestHeader(
 //           "Content-Type",
@@ -102,7 +89,6 @@
 //     });
 //   }
 // }
-
 // async function procurarFilme(query: string): Promise<MovieResult[]> {
 //   query = encodeURI(query);
 //   console.log(query);
@@ -112,7 +98,6 @@
 //   })) as MovieResult[];
 //   return result;
 // }
-
 // async function adicionarFilme(filmeId) {
 //   let result = await HttpClient.get({
 //     url: `https://api.themoviedb.org/3/movie/${filmeId}?apikey=${apikey}&language=en-US`,
@@ -120,7 +105,6 @@
 //   });
 //   console.log(result);
 // }
-
 // async function criarRequestToken() {
 //   let result = await HttpClient.get({
 //     url: `https://api.themoviedb.org/3/authentication/token/new?apikey=${apikey}`,
@@ -128,7 +112,6 @@
 //   });
 //   requestToken = result.request_token;
 // }
-
 // async function logar() {
 //   await HttpClient.get({
 //     url: `https://api.themoviedb.org/3/authentication/token/validate_with_login?apikey=${apikey}`,
@@ -140,7 +123,6 @@
 //     },
 //   });
 // }
-
 // async function criarSessao() {
 //   let result = await HttpClient.get({
 //     url: `https://api.themoviedb.org/3/authentication/session/new?apikey=${apikey}&request_token=${requestToken}`,
@@ -148,7 +130,6 @@
 //   });
 //   sessionId = result.session_id;
 // }
-
 // async function criarLista(nomeDaLista, descricao) {
 //   let result = await HttpClient.get({
 //     url: `https://api.themoviedb.org/3/list?apikey=${apikey}&session_id=${sessionId}`,
@@ -161,7 +142,6 @@
 //   });
 //   console.log(result);
 // }
-
 // async function adicionarFilmeNaLista(filmeId, listaId) {
 //   let result = await HttpClient.get({
 //     url: `https://api.themoviedb.org/3/list/${listaId}/add_item?apikey=${apikey}&session_id=${sessionId}`,
@@ -172,7 +152,6 @@
 //   });
 //   console.log(result);
 // }
-
 // async function pegarLista() {
 //   let result = await HttpClient.get({
 //     url: `https://api.themoviedb.org/3/list/${listId}?apikey=${apikey}`,
@@ -180,7 +159,6 @@
 //   });
 //   console.log(result);
 // }
-
 // interface MovieResult {
 //   original_title: string;
 // }

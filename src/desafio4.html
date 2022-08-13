@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/typescript" src="desafio4.ts"></script>
+    <script type="text/typescript">
+      setTimeout(()=>console.log('hello'));
+    </script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type "text/typescript" src="./desafio4.ts"> </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div style="display: flex;">
-            <div
-                style="display: flex; width: 300px; height: 100px; justify-content: space-between; flex-direction: column;">
-                <input id="login" placeholder="Login" onchange="preencherLogin(event)">
-                <input id="senha" placeholder="Password" type="password" onchange="preencherSenha(event)">
-                <input id="api-key" placeholder="Api Key" onchange="preencherApi()">
-                <button id="login-button">Login</button>
-            </div>
-            <div id="search-container" style="margin-left: 20px">
-                <input id="search" placeholder="Write...">
-                <button id="search-button">Pesquisar Filme</button>
-            </div>
+      <div style="display: flex">
+        <div
+          style="
+            display: flex;
+            width: 300px;
+            height: 100px;
+            justify-content: space-between;
+            flex-direction: column;
+          "
+        >
+          <input
+            id="login"
+            placeholder="Login"
+            value="desafio4dio"
+            onchange="preencherLogin(event)"
+          />
+          <input
+            id="senha"
+            placeholder="Password"
+            value="123456"
+            type="password"
+            onshow="preencherSenha(event)"
+          />
+          <input
+            id="api-key"
+            placeholder="Api Key"
+            value="1b8e0146b857839afcd0bd1ea1e667ce"
+            onchange="preencherApi()"
+          />
+          <button id="login-button">Login</button>
         </div>
+        <div id="search-container" style="margin-left: 20px">
+          <input id="search" placeholder="Write..." />
+          <button id="search-button">Pesquisar Filme</button>
+        </div>
+      </div>
     </header>
-</body>
-
+  </body>
 </html>
